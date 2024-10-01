@@ -1,34 +1,14 @@
 import React, {Component} from 'react';
+import '../../../assets/wds3_js_api.js';
+// Uncomment to have succeful console.log(sls) 
+//import '../../../assets/wds3_js_api_modified.js';
 
 export default class Home extends Component {
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.context.router.push({pathname: `/${this._input.value}`});
-  }
-
   render() {
+    // If sls injected to window, below will log wds3 object.
+    console.log(sls);
     return (
-      <section className="container home">
-        <form
-          className="form-inline"
-          role="form"
-          onSubmit={this.handleSubmit}
-        >
-          <div className="form-group">
-            <div className="input-group">
-              <input
-                type="text"
-                placeholder="Enter a GitHub user..."
-                className="form-control"
-                ref={ref => (this._input = ref)}
-              />
-            </div>
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Go
-          </button>
-        </form>
-      </section>
+      <div>Home App</div>
     );
   }
 }
